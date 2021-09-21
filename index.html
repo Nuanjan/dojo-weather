@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav padding-top-bottom">
+        <div class="navbar display-flex margin-auto">
+            <h1>DojoWeather</h1>
+            <ul class="nav-links display-flex">
+                <li onclick="alert('This page says\n Loading weather report...')">Burbank</li>
+                <li onclick="alert('This page says\n Loading weather report...')">Chicago</li>
+                <li onclick="alert('This page says\n Loading weather report...')">Dallas</li>
+            </ul>
+        </div>
+    </nav>
+    <header class="margin-auto display-flex padding-top-bottom">
+        <h3>San Jose</h3>
+        <div class="header-temperature">
+            <p class="margin-right">Show Temperature in</p>
+            <select onchange="selectTemperatureUnit(this)" name="temperature" id="temperature">
+                <option value="°C">°C</option>
+                <option value="°F">°F</option>
+            </select>
+        </div>
+    </header>
+    <section class="weather-card-container display-flex margin-auto">
+        <div class="weather-showcase-div background-color-gray">
+            <h3 class="text-center margin-bottom">Today</h3>
+            <img class="margin-bottom" src="./assets/some_rain.png" alt="cloud and rain drop image">
+            <p class="text-center margin-bottom">some rain</p>
+            <div class="display-flex margin-auto">
+                <h3 class="color-red temp-number"></h3>
+                <h3 class="color-blue temp-number"></h3>
+            </div>
+        </div>
+        <div class="weather-showcase-div background-color-gray">
+            <h3 class="text-center margin-bottom">Tomorrow</h3>
+            <img class="margin-bottom" src="./assets/some_sun.png" alt="sunny image">
+            <p class="text-center margin-bottom">some sun</p>
+            <div class="display-flex margin-auto">
+                <h3 class="color-red temp-number"></h3>
+                <h3 class="color-blue temp-number"></h3>
+            </div>
+        </div>
+        <div class="weather-showcase-div background-color-gray">
+            <h3 class="text-center margin-bottom">Friday</h3>
+            <img class="margin-bottom" src="./assets/some_clouds.png" alt="cloud image">
+            <p class="text-center margin-bottom">some clouds</p>
+            <div class="display-flex margin-auto">
+                <h3 class="color-red temp-number"></h3>
+                <h3 class="color-blue temp-number"></h3>
+            </div>
+        </div>
+        <div class="weather-showcase-div background-color-gray">
+            <h3 class="text-center margin-bottom">Saturday</h3>
+            <img class="margin-bottom" src="./assets/some_sun.png" alt="sunny image">
+            <p class="text-center margin-bottom">some sun</p>
+            <div class="display-flex margin-auto">
+                <h3 class="color-red temp-number"></h3>
+                <h3 class="color-blue temp-number"></h3>
+            </div>
+        </div>
+    </section>
+    <div id="cookies" class="cookie-div display-flex margin-auto padding-top-bottom background-color-gray">
+        <img src="./assets/cookie.png" alt="cookie image">
+        <div>
+            <h4>Stop! Cookie time</h4>
+            <p>We use cookies( sadly not the edible ones) to personalize content and ads, to providesocial media feature
+                and to analyse our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <button onclick="dismissCookie(cookies)" class="btn">I Accept</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
